@@ -1,0 +1,16 @@
+{
+  "name": "assdi-batch-2-level-2-assignment-1-sabbirmms",
+  "version": "1.0.0",
+  "description": "> @sabbirmms (Discord ID)",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
+  }
+}

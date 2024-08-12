@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 1</title>
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/dist/styles.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <!-- First Layer: Top Bar with Offers and Links -->
+    <div class="px-20 py-3 flex bg-[#272343] text-white items-center">
+      <p class="flex-grow-[6] basis-[60%]">
+        <i class="fa fa-check"></i> Free Shipping On All Orders Over $50
+      </p>
+      <div class="flex space-x-4">
+        <a href="#" class="flex-shrink-0">Eng <i class="fa fa-chevron-down"></i></a>
+        <a href="#" class="flex-shrink-0">Faqs</a>
+        <a href="#" class="flex-shrink-0">
+          <i class="fa-regular fa-circle-question"></i> Need Help
+        </a>
+      </div>
+    </div>
+
+    <!-- Second Layer: Logo, Search Bar, and Icons -->
+    <div class="px-20 py-3 bg-[#f0f2f3] flex justify-between items-center">
+      <!-- Logo and Brand Name -->
+      <div class="flex items-center gap-2">
+        <img src="./images/Logo Icon.png" alt="Logo" class="h-8" />
+        <h1 class="text-2xl font-bold text-[#272343]">Comforty</h1>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="flex items-center bg-white border border-gray-300 rounded-md overflow-hidden w-1/3">
+        <input type="text" placeholder="Search here" class="flex-grow px-4 py-2 focus:outline-none" />
+        <button class="px-4 text-gray-500">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+
+      <!-- Icons: Cart, Love, and Person -->
+      <div class="flex items-center space-x-4">
+        <!-- Cart Icon with Item Count -->
+        <a href="#" class="flex items-center space-x-2 text-gray-800 bg-white p-3 rounded-md">
+          <i class="fa fa-cart-shopping text-xl"></i>
+          <span>Cart</span>
+          <span class="flex items-center justify-center w-5 h-5 bg-[#007580] text-white text-xs rounded-full">2</span>
+        </a>
+
+        <!-- Love Icon -->
+        <a href="#" class="text-gray-800 bg-white p-3 rounded-md">
+          <i class="fa fa-heart text-xl"></i>
+        </a>
+
+        <!-- Person Icon -->
+        <a href="#" class="text-gray-800 bg-white p-3 rounded-md">
+          <i class="fa fa-user text-xl"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Third Layer: Navigation Links -->
+    <div class="px-20 py-3 bg-white flex justify-between items-center border-t border-b border-gray-300">
+      <!-- Navigation Options -->
+      <div class="flex items-center space-x-8">
+        <!-- All Categories with Icon -->
+        <div class="flex items-center space-x-2 border border-gray-300 p-3 rounded-md">
+          <i class="fa fa-bars text-gray-500"></i>
+          <span class="font-semibold">All Categories</span>
+        </div>
+
+        <!-- Other Navigation Links -->
+        <a href="#" class="text-[#007580] font-semibold">Home</a>
+        <a href="#" class="text-gray-800 font-semibold">Shop</a>
+        <a href="#" class="text-gray-800 font-semibold">Product</a>
+        <a href="#" class="text-gray-800 font-semibold">Pages</a>
+        <a href="#" class="text-gray-800 font-semibold">About</a>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="flex items-center space-x-2">
+        <span class="text-gray-500 font-semibold">Contact:</span>
+        <span class="text-gray-800 font-bold">01050200255</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="bg-slate-100 flex items-center justify-between px-10 py-20 m-6 rounded-2xl">
+    <!-- Left Arrow Button -->
+    <a href="#" class="p-4 rounded-full bg-white shadow-md flex items-center justify-center w-12 h-12">
+      <i class="fa-solid fa-arrow-left text-[#007580]"></i>
+    </a>
+
+    <!-- Welcome Text and Headline -->
+    <div>
+      <p class="text-sm text-gray-600">WELCOME TO CHAIRY</p>
+      <h2 class="text-4xl font-bold text-[#272343] leading-tight mt-2 text-left">
+        Best Furniture<br />
+        Collection For Your<br />
+        Interior.
+      </h2>
+      <button class="bg-teal-600 py-2 px-6 text-white rounded-md mt-4 flex items-center">
+        Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+
+    <!-- Chair Image Container -->
+    <div class="w-2/5 flex justify-end relative">
+      <!-- Background Image -->
+      <div class="absolute top-0 right-0 w-full h-full bg-no-repeat bg-contain pointer-events-none" style="
+            background-image: url('./images/circle.png');
+            background-position: top right;
+            z-index: 1;
+            margin-top: -5rem;
+          "></div>
+
+      <!-- Chair Image -->
+      <img src="./images/chair.png" alt="chair" class="w-full max-w-xs relative" style="z-index: 2" />
+
+      <!-- Discount Tag -->
+      <div
+        class="absolute top-0 right-0 -mr-1 mt-8 bg-white text-black rounded-full p-2 flex flex-col items-center justify-center text-xs font-normal"
+        style="z-index: 3; width: 4rem; height: 4rem">
+        <span class="text-red-500 font-bold text-lg">54%</span>
+        <span class="block text-black text-xs">Discount</span>
+      </div>
+    </div>
+
+    <!-- Right Arrow Button -->
+    <a href="#" class="p-4 rounded-full bg-white shadow-md flex items-center justify-center w-12 h-12">
+      <i class="fa-solid fa-arrow-right text-[#007580]"></i>
+    </a>
+  </header>
+
+  <!-- Services Section -->
+  <div class="flex justify-between content-center p-10 mx-36 -mt-20 shadow-md shadow-gray-600 rounded-md bg-white"
+    style="z-index: 5">
+    <!-- Service 1: Discount -->
+    <div class="text-[#272343] flex gap-2">
+      <img src="./images/box.png" alt="box" />
+      <div>
+        <p class="font-bold">Discount</p>
+        <p class="text-gray-500 text-sm">Every week new sales</p>
+      </div>
+    </div>
+
+    <!-- Service 2: Free Delivery -->
+    <div class="text-[#272343] flex gap-2">
+      <img src="./images/delivery-truck.png" alt="box" />
+      <div>
+        <p class="font-bold">Free Delivery</p>
+        <p class="text-gray-500 text-sm">100% Free for all orders</p>
+      </div>
+    </div>
+
+    <!-- Service 3: Great Support 24/7 -->
+    <div class="text-[#272343] flex gap-2">
+      <img src="./images/24-hours.png" alt="box" />
+      <div>
+        <p class="font-bold">Great Support 24/7</p>
+        <p class="text-gray-500 text-sm">We are your experiences</p>
+      </div>
+    </div>
+
+    <!-- Service 4: Secure Payment -->
+    <div class="text-[#272343] flex gap-2">
+      <img src="./images/shield.png" alt="box" />
+      <div>
+        <p class="font-bold">Secure Payment</p>
+        <p class="text-gray-500 text-sm">100% Secure Payment Method</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Company Logos Section -->
+  <div class="flex justify-between items-center mx-36 my-5 h-32">
+    <img src="./images/zapier.png" alt="Company" class="h-20" />
+    <img src="./images/pipedrive.png" alt="Company" class="h-20" />
+    <img src="./images/cibbank.png" alt="Company" class="h-20" />
+    <img src="./images/Z.png" alt="Company" class="h-20" />
+    <img src="./images/Burnt_toast.png" alt="Company" class="h-20" />
+    <img src="./images/panda_doc.png" alt="Company" class="h-20" />
+    <img src="./images/moz.png" alt="Company" class="h-20" />
+  </div>
+
+  <!-- Featured Products Section -->
+  <div class="mx-36">
+    <div class="flex justify-between items-center">
+      <h3 class="font-bold text-2xl text-[#272343]">Featured Products</h3>
+      <div class="flex gap-2">
+        <!-- Left Arrow Button -->
+        <a href="#" class="p-3 bg-[#007580] rounded-full flex items-center justify-center w-12 h-12">
+          <i class="fa-solid fa-arrow-left text-white"></i>
+        </a>
+        <!-- Right Arrow Button -->
+        <a href="#" class="p-3 bg-gray-500 rounded-full flex items-center justify-center w-12 h-12">
+          <i class="fa-solid fa-arrow-right text-white"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="flex space-x-4 my-6">
+      <!-- Item 1 -->
+      <div class="w-1/4 relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair1.png" alt="chair" />
+
+        <!-- Top Tags: New and Heart Icon -->
+        <div class="absolute top-2 left-2 flex justify-between items-center w-full pr-4">
+          <span class="bg-green-600 text-white px-2 py-1 text-sm rounded-md">New</span>
+          <a href="#" class="bg-white text-black px-2 py-1 rounded-md">
+            <i class="fa-regular fa-heart"></i>
+          </a>
+        </div>
+
+        <!-- Product Info -->
+        <div class="mt-4 flex justify-between items-center">
+          <!-- Name and Price -->
+          <div>
+            <p class="text-[#007580] text-sm">Library Stool Chair</p>
+            <p class="text-[#272343] font-bold">$20</p>
+          </div>
+          <!-- Cart Icon -->
+          <a href="#" class="text-white bg-[#029FAE] p-2 h-fit rounded-md">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="w-1/4 relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair2.png" alt="chair" />
+
+        <!-- Top Tags: New and Heart Icon -->
+        <div class="absolute top-2 left-2 flex justify-between items-center w-full pr-4">
+          <span class="bg-[#F5813F] text-white px-2 py-1 text-sm rounded-md">New</span>
+          <a href="#" class="bg-white text-black px-2 py-1 rounded-md invisible">
+            <i class="fa-regular fa-heart"></i>
+          </a>
+        </div>
+
+        <!-- Product Info -->
+        <div class="mt-4 flex justify-between items-center">
+          <!-- Name and Price -->
+          <div>
+            <p class="text-[#007580] text-sm">Library Stool Chair</p>
+            <p class="text-[#272343] font-bold">
+              $20
+              <span class="text-gray-500 font-thin line-through ml-2">$30</span>
+            </p>
+          </div>
+          <!-- Cart Icon -->
+          <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="w-1/4 relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair3.png" alt="chair" />
+
+        <!-- Product Info -->
+        <div class="mt-4 flex justify-between items-center">
+          <!-- Name and Price -->
+          <div>
+            <p class="text-[#007580] text-sm">Library Stool Chair</p>
+            <p class="text-[#272343] font-bold">$20</p>
+          </div>
+          <!-- Cart Icon -->
+          <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="w-1/4 relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair4.png" alt="chair" />
+
+        <!-- Product Info -->
+        <div class="mt-4 flex justify-between items-center">
+          <!-- Name and Price -->
+          <div>
+            <p class="text-[#007580] text-sm">Library Stool Chair</p>
+            <p class="text-[#272343] font-bold">$20</p>
+          </div>
+          <!-- Cart Icon -->
+          <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Categories Section -->
+  <div class="mx-36 my-12">
+    <div class="flex justify-between items-center">
+      <h3 class="font-bold text-2xl text-[#272343]">Top Categories</h3>
+      <div class="flex gap-2">
+        <!-- Left Arrow Button -->
+        <a href="#" class="p-3 bg-[#007580] rounded-full flex items-center justify-center w-12 h-12">
+          <i class="fa-solid fa-arrow-left text-white"></i>
+        </a>
+        <!-- Right Arrow Button -->
+        <a href="#" class="p-3 bg-gray-500 rounded-full flex items-center justify-center w-12 h-12">
+          <i class="fa-solid fa-arrow-right text-white"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Top Categories -->
+    <div class="flex space-x-4 my-6">
+      <!-- Item 1 -->
+      <div class="w-full relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair5.png" alt="chair" />
+
+        <!-- Overlay: Name and Price -->
+        <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 rounded-b-md">
+          <p class="text-sm font-bold">Wing Chair</p>
+          <p class="text-gray-300 font-thin">3,584 Products</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="w-full relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair6.png" alt="chair" />
+
+        <!-- Overlay: Name and Price -->
+        <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 rounded-b-md">
+          <p class="text-sm font-bold">Wooden chair</p>
+          <p class="text-gray-300 font-thin">157 Products</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="w-full relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair7.png" alt="chair" />
+
+        <!-- Overlay: Name and Price -->
+        <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 rounded-b-md">
+          <p class="text-sm font-bold">Desk Chair</p>
+          <p class="text-gray-300 font-thin">154 Products</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Products -->
+    <div class="my-10">
+      <!-- Our Products -->
+
+      <div class="flex flex-col items-center gap-5">
+        <h1 class="font-bold text-2xl">Our Products</h1>
+        <div class="flex gap-6 text-sm font-bold text-gray-500">
+          <a href="" class="text-black">ALL</a>
+          <a href="">NEWEST</a>
+          <a href="">TRENDING</a>
+          <a href="">BEST SELLERS</a>
+          <a href="">FEATURED</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 my-6">
+        <!-- Item 1 -->
+        <div class="relative">
+          <img class="h-auto w-full rounded-md" src="./images/chair1.png" alt="chair" />
+          <!-- Top Tags: New and Heart Icon -->
+          <div class="absolute top-2 left-2 flex justify-between items-center w-full pr-4">
+            <span class="bg-green-600 text-white px-2 py-1 text-sm rounded-md">New</span>
+            <a href="#" class="bg-white text-black px-2 py-1 rounded-md">
+              <i class="fa-regular fa-heart"></i>
+            </a>
+          </div>
+          <!-- Product Info -->
+          <div class="mt-4 flex justify-between items-center">
+            <div>
+              <p class="text-[#007580] text-sm">Library Stool Chair</p>
+              <p class="text-[#272343] font-bold">$20</p>
+            </div>
+            <a href="#" class="text-white bg-[#029FAE] p-2 h-fit rounded-md">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="relative">
+          <img class="h-auto w-full rounded-md" src="./images/chair2.png" alt="chair" />
+          <!-- Top Tags: New and Heart Icon -->
+          <div class="absolute top-2 left-2 flex justify-between items-center w-full pr-4">
+            <span class="bg-[#F5813F] text-white px-2 py-1 text-sm rounded-md">New</span>
+            <a href="#" class="bg-white text-black px-2 py-1 rounded-md invisible">
+              <i class="fa-regular fa-heart"></i>
+            </a>
+          </div>
+          <!-- Product Info -->
+          <div class="mt-4 flex justify-between items-center">
+            <div>
+              <p class="text-[#007580] text-sm">Library Stool Chair</p>
+              <p class="text-[#272343] font-bold">
+                $20
+                <span class="text-gray-500 font-thin line-through ml-2">$30</span>
+              </p>
+            </div>
+            <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="relative">
+          <img class="h-auto w-full rounded-md" src="./images/chair3.png" alt="chair" />
+          <!-- Product Info -->
+          <div class="mt-4 flex justify-between items-center">
+            <div>
+              <p class="text-[#007580] text-sm">Library Stool Chair</p>
+              <p class="text-[#272343] font-bold">$20</p>
+            </div>
+            <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="relative">
+          <img class="h-auto w-full rounded-md" src="./images/chair4.png" alt="chair" />
+          <!-- Product Info -->
+          <div class="mt-4 flex justify-between items-center">
+            <div>
+              <p class="text-[#007580] text-sm">Library Stool Chair</p>
+              <p class="text-[#272343] font-bold">$20</p>
+            </div>
+            <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 5 (Duplicate of Item 1) -->
+        <div class="relative">
+          <img class="h-auto w-full rounded-md" src="./images/chair5.png" alt="chair" />
+          <!-- Top Tags: New and Heart Icon -->
+          <div class="absolute top-2 left-2 flex justify-between items-center w-full pr-4">
+            <span class="bg-green-600 text-white px-2 py-1 text-sm rounded-md">New</span>
+            <a href="#" class="bg-white text-black px-2 py-1 rounded-md">
+              <i class="fa-regular fa-heart"></i>
+            </a>
+          </div>
+          <!-- Product Info -->
+          <div class="mt-4 flex justify-between items-center">
+            <div>
+              <p class="text-[#007580] text-sm">Library Stool Chair</p>
+              <p class="text-[#272343] font-bold">$20</p>
+            </div>
+            <a href="#" class="text-white bg-[#029FAE] p-2 h-fit rounded-md">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 6 (Duplicate of Item 2) -->
+        <div class="relative">
+          <img class="h-auto w-full rounded-md" src="./images/chair8.png" alt="chair" />
+          <!-- Top Tags: New and Heart Icon -->
+          <div class="absolute top-2 left-2 flex justify-between items-center w-full pr-4">
+            <span class="bg-[#F5813F] text-white px-2 py-1 text-sm rounded-md">New</span>
+            <a href="#" class="bg-white text-black px-2 py-1 rounded-md invisible">
+              <i class="fa-regular fa-heart"></i>
+            </a>
+          </div>
+          <!-- Product Info -->
+          <div class="mt-4 flex justify-between items-center">
+            <div>
+              <p class="text-[#007580] text-sm">Library Stool Chair</p>
+              <p class="text-[#272343] font-bold">
+                $20
+                <span class="text-gray-500 font-thin line-through ml-2">$30</span>
+              </p>
+            </div>
+            <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 7 (Duplicate of Item 3) -->
+        <div class="relative">
+          <img class="h-auto w-full rounded-md" src="./images/chair9.png" alt="chair" />
+          <!-- Product Info -->
+          <div class="mt-4 flex justify-between items-center">
+            <div>
+              <p class="text-[#007580] text-sm">Library Stool Chair</p>
+              <p class="text-[#272343] font-bold">$20</p>
+            </div>
+            <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 8 (Duplicate of Item 4) -->
+        <div class="relative">
+          <img class="h-auto w-full rounded-md" src="./images/chair10.png" alt="chair" />
+          <!-- Product Info -->
+          <div class="mt-4 flex justify-between items-center">
+            <div>
+              <p class="text-[#007580] text-sm">Library Stool Chair</p>
+              <p class="text-[#272343] font-bold">$20</p>
+            </div>
+            <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What Client Says About Us -->
+  <div class="bg-gray-300 py-10">
+    <div class="mx-32 my-12">
+      <div class="flex justify-between items-center">
+        <h3 class="font-bold text-2xl text-[#272343]">
+          What Client Says About Us
+        </h3>
+        <div class="flex gap-2">
+          <!-- Left Arrow Button -->
+          <a href="#" class="p-3 bg-[#007580] rounded-full flex items-center justify-center w-12 h-12">
+            <i class="fa-solid fa-arrow-left text-white"></i>
+          </a>
+          <!-- Right Arrow Button -->
+          <a href="#" class="p-3 bg-gray-500 rounded-full flex items-center justify-center w-12 h-12">
+            <i class="fa-solid fa-arrow-right text-white"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex gap-4 mx-32">
+      <!-- Item 1 -->
+      <div class="bg-white rounded-md p-6">
+        <!-- Paragraph with Left Border -->
+        <p class="font-normal border-l-4 border-green-500 pl-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          expedita at architecto ipsam incidunt molestias minima nobis vitae
+          recusandae, nihil aut quis rem quibusdam ratione omnis tempore
+          veniam soluta tempora, quas inventore eos culpa. Odit ratione
+          laudantium qui. Perferendis impedit enim doloremque, dolores fugiat
+          adipisci quod dolorum.
+        </p>
+        <!-- Person Information -->
+        <div class="flex gap-3 relative m-2">
+          <img src="./images/p1.png" alt="Person" class="w-14 h-14" />
+          <p class="font-bold">
+            Kristin Waston
+            <span class="text-gray-400 block font-normal">Fashion Designer</span>
+          </p>
+          <img src="./images/comma.svg" alt="comma" class="absolute h-28 w-28 end-0" />
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-white p-6 rounded-md">
+        <!-- Paragraph with Left Border -->
+        <p class="font-normal border-l-4 border-green-500 pl-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          expedita at architecto ipsam incidunt molestias minima nobis vitae
+          recusandae, nihil aut quis rem quibusdam ratione omnis tempore
+          veniam soluta tempora, quas inventore eos culpa. Odit ratione
+          laudantium qui. Perferendis impedit enim doloremque, dolores fugiat
+          adipisci quod.
+        </p>
+        <!-- Person Information -->
+        <div class="flex gap-3 relative m-2">
+          <img src="./images/p2.png" alt="Person" class="w-14 h-14" />
+          <p class="font-bold">
+            Kristin Waston
+            <span class="text-gray-400 block font-normal">Fashion Designer</span>
+          </p>
+          <img src="./images/comma.svg" alt="comma" class="absolute h-28 w-28 end-0" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recently Added -->
+  <div class="mx-36 p-10">
+    <div class="flex justify-between items-center">
+      <h3 class="font-bold text-2xl text-[#272343]">Featured Products</h3>
+      <div class="flex gap-2">
+        <!-- Left Arrow Button -->
+        <a href="#" class="p-3 bg-[#007580] rounded-full flex items-center justify-center w-12 h-12">
+          <i class="fa-solid fa-arrow-left text-white"></i>
+        </a>
+        <!-- Right Arrow Button -->
+        <a href="#" class="p-3 bg-gray-500 rounded-full flex items-center justify-center w-12 h-12">
+          <i class="fa-solid fa-arrow-right text-white"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Recently Added -->
+    <div class="flex space-x-4 my-6">
+      <!-- Item 1 -->
+      <div class="w-1/4 relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair1.png" alt="chair" />
+
+        <!-- Top Tags: New and Heart Icon -->
+        <div class="absolute top-2 left-2 flex justify-between items-center w-full pr-4">
+          <span class="bg-green-600 text-white px-2 py-1 text-sm rounded-md">New</span>
+          <a href="#" class="bg-white text-black px-2 py-1 rounded-md">
+            <i class="fa-regular fa-heart"></i>
+          </a>
+        </div>
+
+        <!-- Product Info -->
+        <div class="mt-4 flex justify-between items-center">
+          <!-- Name and Price -->
+          <div>
+            <p class="text-[#007580] text-sm">Library Stool Chair</p>
+            <p class="text-[#272343] font-bold">$20</p>
+          </div>
+          <!-- Cart Icon -->
+          <a href="#" class="text-white bg-[#029FAE] p-2 h-fit rounded-md">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="w-1/4 relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair2.png" alt="chair" />
+
+        <!-- Top Tags: New and Heart Icon -->
+        <div class="absolute top-2 left-2 flex justify-between items-center w-full pr-4">
+          <span class="bg-[#F5813F] text-white px-2 py-1 text-sm rounded-md">New</span>
+          <a href="#" class="bg-white text-black px-2 py-1 rounded-md invisible">
+            <i class="fa-regular fa-heart"></i>
+          </a>
+        </div>
+
+        <!-- Product Info -->
+        <div class="mt-4 flex justify-between items-center">
+          <!-- Name and Price -->
+          <div>
+            <p class="text-[#007580] text-sm">Library Stool Chair</p>
+            <p class="text-[#272343] font-bold">
+              $20
+              <span class="text-gray-500 font-thin line-through ml-2">$30</span>
+            </p>
+          </div>
+          <!-- Cart Icon -->
+          <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="w-1/4 relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair3.png" alt="chair" />
+
+        <!-- Product Info -->
+        <div class="mt-4 flex justify-between items-center">
+          <!-- Name and Price -->
+          <div>
+            <p class="text-[#007580] text-sm">Library Stool Chair</p>
+            <p class="text-[#272343] font-bold">$20</p>
+          </div>
+          <!-- Cart Icon -->
+          <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="w-1/4 relative">
+        <!-- Image -->
+        <img class="h-auto w-full rounded-md" src="./images/chair4.png" alt="chair" />
+
+        <!-- Product Info -->
+        <div class="mt-4 flex justify-between items-center">
+          <!-- Name and Price -->
+          <div>
+            <p class="text-[#007580] text-sm">Library Stool Chair</p>
+            <p class="text-[#272343] font-bold">$20</p>
+          </div>
+          <!-- Cart Icon -->
+          <a href="#" class="text-black bg-gray-300 p-2 h-fit rounded-md">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <hr />
+  <footer class=" ">
+    <div class="px-32 py-10 flex justify-between">
+      <!-- Company -->
+      <div>
+        <div class="flex">
+          <img src="./images/Logo Icon.png" alt="Logo" class="h-10 w-10" />
+          <h1 class="text-2xl font-bold text-[#272343] ml-2">Comforty</h1>
+        </div>
+        <p class="max-w-40 text-[#272343] my-5">
+          Lorem ipsum dolor sit amet consectetur <br />adipisicing elit.
+          Fugit, consequuntur volupta<br />
+          nihil officia officiis dicta quis voluptate?
+        </p>
+        <div class="flex gap-1 my-5">
+          <a href="#" class="p-2 rounded-full flex items-center justify-center w-12 h-12">
+            <i class="fa-brands fa-facebook text-[#007580] text-xl"></i>
+          </a>
+          <a href="#" class="p-2 rounded-full flex items-center justify-center w-12 h-12">
+            <i class="fa-brands fa-twitter text-gray-500 text-xl"></i>
+          </a>
+          <a href="#" class="p-2 rounded-full flex items-center justify-center w-12 h-12">
+            <i class="fa-brands fa-instagram text-gray-500 text-xl"></i>
+          </a>
+          <a href="#" class="p-2 rounded-full flex items-center justify-center w-12 h-12">
+            <i class="fa-brands fa-pinterest text-gray-500 text-xl"></i>
+          </a>
+          <a href="#" class="p-2 rounded-full flex items-center justify-center w-12 h-12">
+            <i class="fa-brands fa-youtube text-gray-500 text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Category -->
+      <div>
+        <h2 class="text-gray-500">CATEGORY</h2>
+        <ul class="list-inside text-[#272343] list-none">
+          <li><a href="#">Sofa</a></li>
+          <li><a href="#">Armchair</a></li>
+          <li><a href="#">Wing Chair</a></li>
+          <li><a href="#">Desk Chair</a></li>
+          <li><a href="#">Wooden Chair</a></li>
+          <li><a href="#">Park Bench</a></li>
+        </ul>
+      </div>
+      <!-- Support -->
+      <div>
+        <h2 class="text-gray-500">SUPPORT</h2>
+        <ul class="list-none list-inside text-[#272343]">
+          <li><a href="#">Help & Support</a></li>
+          <li><a href="#">Tearms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="bg-gray-100 flex-row items-center justify-center w-2/5 p-8">
+        <!-- Title -->
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Newsletter</h2>
+
+        <!-- Form -->
+        <form class="flex flex-col sm:flex-row gap-4">
+          <!-- Email Input -->
+          <input type="email" placeholder="Enter your email"
+            class="flex-grow p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            required />
+
+          <!-- Subscribe Button -->
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+            Subscribe
+          </button>
+        </form>
+
+        <!-- Placeholder Text -->
+        <p class="text-gray-600 mt-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <!-- End Footer -->
+    <div class="py-10 px-32">
+      <p class="text-gray-500">
+        &copy; 2024 - Assignment - Designed by
+        <span class="text-black font-bold">Sabbir MMS</span>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
